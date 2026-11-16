@@ -48,17 +48,19 @@ The repository includes the Streamlit entry point, feature modules, algorithm im
 | `urban_planning.py` | Road-network and urban-planning optimization |
 | `public_transit.py` | Public-transit optimization interface |
 | `algorithms.py` | Shared graph and optimization algorithms |
-| `data.py` | Data loading and in-memory data structures |
+| `data.py` | Sample datasets defined in code (the app's actual data source) |
 | `utils.py` | Shared utility functions |
 | `tests.py` | Algorithm and optimization unit tests |
 | `test_transit.py` | Transit and integration-oriented tests |
-| CSV files | Sample road, traffic, neighborhood, facility, and transit data |
+| `simulation.py` | Standalone vehicle-simulation prototype; not used by `app.py` and currently non-functional |
+| `requirements.txt` | Pinned third-party dependencies |
+| CSV files | Reference copies of sample road, traffic, neighborhood, facility, and transit data; not read by the application code |
 
 ## Getting started
 
 ### 1. Requirements
 
-- Python 3.10 or newer is recommended.
+- Python 3.12 or newer (required by the pinned dependency versions; tested with Python 3.13).
 - pip
 - Git
 
@@ -96,7 +98,7 @@ source .venv/bin/activate
 
 ```bash
 python -m pip install --upgrade pip
-python -m pip install streamlit networkx pandas numpy matplotlib pyvis folium streamlit-folium pydeck
+python -m pip install -r requirements.txt
 ```
 
 ### 5. Run the application
